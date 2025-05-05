@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-BLOB_MOUNT_PATH = "C:\\Users\\regkrish\\retain-agent\\data"
+BLOB_MOUNT_PATH = "frontend/data"
 
 
 DATA_PATHS = {
