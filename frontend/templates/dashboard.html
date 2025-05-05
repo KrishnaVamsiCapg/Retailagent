@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>{{ title }}</h1>
+  <a href="/">← Back to Home</a>
+
+  <div class="dashboard-content">
+    <p>{{ description }}</p>
+
+    {% if data %}
+      <table>
+        <thead>
+          <tr>
+            {% for col in data[0].keys() %}
+              <th>{{ col }}</th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in data %}
+            <tr>
+              {% for value in row.values() %}
+                <td>{{ value }}</td>
+              {% endfor %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No data available yet.</p>
+    {% endif %}
+  </div>
+</body>
+</html>
