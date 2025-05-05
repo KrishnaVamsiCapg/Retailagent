@@ -4,7 +4,10 @@ import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-BLOB_MOUNT_PATH = "frontend/data"
+#BLOB_MOUNT_PATH = "frontend/data"
+
+#Update the path to the cloned repository
+BLOB_MOUNT_PATH = os.path.join(os.path.dirname(__file__), 'frontend', 'data')
 
 
 DATA_PATHS = {
